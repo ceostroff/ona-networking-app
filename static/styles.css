@@ -1,0 +1,47 @@
+html {
+    display: block;
+}
+body {
+    color: #11142d;
+    font-family: lato,tahoma,helvetica,arial,sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+input{
+  border: 2px solid black;
+}
+
+h2{
+  color: black;
+}
+
+
+.mugshot{
+  width: 50px;
+}
+
+
+table{
+  font-size: 14px;
+}
+
+
+input.submit-button{
+  background: #b33062;
+    color: #fff;
+    border: none;
+    border-bottom: 4px solid rgba(0,0,0,.15);
+    font-size: 1rem;
+    line-height: 1.2;
+    padding: .6em 1em .4em;
+    text-shadow: 0 1px 0 rgba(0,0,0,.05);
+    text-decoration: none;
+    
+
+}

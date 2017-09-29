@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search results</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+    <script type="text/javascript" src="{{url_for('static', filename='main.js')}}">
+        <script type="text/javascript" src="{{url_for('static', filename='typahead.js')}}">
+</head>
+<body>
+
+  <p>Go back to <a href="{{url_for('homepage')}}">homepage</a></p>
+
+
+  <p>These are the journalists you may want to meet who live in the
+      {{search_type}} of {{search_value}}
+  </p>
+
+  <table>
+    <tbody>
+      {% for p in ona %}
+        <tr>
+          <td><img class="mugshot" src="https://theunitedstates.io/images/congress/225x275/{{p.bioguide_id}}.jpg" alt="{{p.bioguide}}"></td>
+          
+          <td>Name: {{p.fullname}}</td>
+            
+            <td>Job Title: {{p.title}}</td>
+          <td>Publication: {{p.publication}} in {{p.state}} </td>
+            <td>Interest: {{p.interest}} </td>
+
+        </tr>
+      {% endfor %}
+    </tbody>
+
+  </table>
+
+</body>
+</html>
