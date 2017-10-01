@@ -1,5 +1,5 @@
 # ONA Network
 
-This is a Flask application that uses WTF forms to allow attendees at ONA17 to network with each other based on interest, titles, publication and location. 
+This is a Flask application that allows attendees at ONA17 to network with each other based on interest, publication and location. 
 
-THis app is still being updated with form autocomplete and updated CSS before ONA.
+This app is still a work in progress and I will post a necessary installations component upon completion. It runs on localhost:5000
