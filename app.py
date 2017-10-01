@@ -1,5 +1,6 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from foo import just_do_it
+from helpers import filter_by_state
 app = Flask(__name__)
 
 @app.route("/")
@@ -28,6 +29,7 @@ def results():
     elif request.args.get('state'):
         search_type = 'state'
         search_val = request.args.get('state')
+        app.logger.debug(search_val)
         peeps = just_do_it(state=search_val, sortby=_sortby)
         
     elif request.args.get('publication'):

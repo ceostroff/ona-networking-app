@@ -1,4 +1,5 @@
 from operator import itemgetter
+from flask import jsonify
 import csv
 LEGS_FNAME = './static/data/ona.csv'
 

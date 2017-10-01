@@ -4,18 +4,23 @@
   <meta charset="UTF-8">
   <title>Search for a ONA human</title>
   <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
-<script src="{{url_for('static', filename='main.js')}}">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js" type="text/javascript"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/0.11.1/typeahead.bundle.min.js" type="text/javascript"></script>
-
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.js"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='js/typeahead.js')}}"></script>
+    	<script src="{{url_for('static', filename='js/main.js')}}"></script>
+    <!-- particles.js container --> <div id="particles-js"></div> <!-- stats - count particles -->  <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib --> <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
 </head>
 <body>
 
+    <div class="content">
 
-  <h3>Search for an ONA human</h3>
+  <h1>Search for an ONA human</h1>
   {% include 'searchbox.html' %}
 
-  <p>Data comes from thes<a href="https://www.journalists.org"> Online News Association</a></p>
-</body>
+  <p>Data comes from the <a href="https://www.journalists.org">Online News Association</a></p>
+</div>
+    </body>
+<div class="thanks">
+    <p>Twitter Icon by Luboš Volkov and User Icon by Evgeniy Kozachenko, both from the Noun Project</p>
+    </div>
 </html>

@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <title>Search results</title>
   <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
-    <script type="text/javascript" src="{{url_for('static', filename='main.js')}}">
-        <script type="text/javascript" src="{{url_for('static', filename='typahead.js')}}">
+      <script type="text/javascript" src="{{url_for('static', filename='js/typeahead.js')}}"></script>
+    	<script src="{{url_for('static', filename='js/main.js')}}"></script>
+    <!-- particles.js container --> <div id="particles-js"></div> <!-- stats - count particles -->  <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib --> <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
 </head>
 <body>
-
+<div class="content">
   <p>Go back to <a href="{{url_for('homepage')}}">homepage</a></p>
 
 
@@ -16,23 +17,25 @@
       {{search_type}} of {{search_value}}
   </p>
 
-  <table>
-    <tbody>
+  
+    <div id="results">
+        
+    
       {% for p in ona %}
-        <tr>
-          <td><img class="mugshot" src="https://theunitedstates.io/images/congress/225x275/{{p.bioguide_id}}.jpg" alt="{{p.bioguide}}"></td>
-          
-          <td>Name: {{p.fullname}}</td>
+        
+
+        <img id="person" src="{{ url_for('static', filename='img/person.svg')}}" width="100" height="100">
+          <p>Name: {{p.fullname}}</p>
             
-            <td>Job Title: {{p.title}}</td>
-          <td>Publication: {{p.publication}} in {{p.state}} </td>
-            <td>Interest: {{p.interest}} </td>
+            <p>Job Title: {{p.title}}</p>
+          <p>Publication: {{p.publication}} in {{p.state}} </p>
+        <p>Interest: {{p.interest}} </p>
+    <img id="twitter" src="{{ url_for('static', filename='img/twitter.svg')}}" width="100" height="100">
 
-        </tr>
+       
       {% endfor %}
-    </tbody>
+    </div>
 
-  </table>
-
+    </div>
 </body>
 </html>
