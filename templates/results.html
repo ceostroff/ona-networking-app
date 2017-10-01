@@ -27,16 +27,15 @@
       {% for p in ona %}
         
 
-        <img id="person" src="{{ url_for('static', filename='img/person.svg')}}" width="100" height="100">
+        <img class="person" src="{{ url_for('static', filename='img/person.svg')}}" width="100" height="100">
           <p>{{p.fullname}}</p>
             
-            <p id="info">{{p.fullname}} works as a {{p.title}} at {{p.publication}} in {{p.city}}, {{p.state}}. If you're also interested in {{p.interest}}, you should reach out on Twitter and meet up at #ONA17.</p>
+            <p class="info">{{p.fullname}} works as a {{p.title}} at {{p.publication}} in {{p.city}}, {{p.state}}. If you're also interested in {{p.interest}}, you should reach out on Twitter and meet up at #ONA17.</p>
     <img id="twitter" src="{{ url_for('static', filename='img/twitter.svg')}}" width="75" height="75">
 
        
       {% endfor %}
     </div>
-
     </div>
 </body>
 </html>

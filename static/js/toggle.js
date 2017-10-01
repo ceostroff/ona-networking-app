@@ -1,6 +1,10 @@
 $(document).ready(function() { 
-$("#info").hide();     
-$("#person").on("click", function(){
-$("#info").toggle();
+    $(window).load(function(){
+        
+    $(".info").hide();     
+$("#.erson").on("click", function(){
+$(".info").toggle();
    }); 
-});
+});    
+    });
+

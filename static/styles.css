@@ -11,7 +11,7 @@ body {
     font-size: 1.15rem;
     line-height: 1.7;
     background-color: #eae8d5;
-    
+    padding-left: 20%;
 }
 
 form {
@@ -23,6 +23,7 @@ form {
 
 input{
   border: 2px solid black;
+    padding-top: 10px;
 }
 
 h1{
@@ -50,8 +51,6 @@ text-align: center;
         
 }
 
-
-
 input.submit-button{
   background: #b33062;
     color: #fff;
@@ -62,7 +61,6 @@ input.submit-button{
     padding: .6em 1em .4em;
     text-shadow: 0 1px 0 rgba(0,0,0,.05);
     text-decoration: none;
-    
 
 }
 .content {
