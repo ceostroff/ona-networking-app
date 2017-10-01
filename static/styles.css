@@ -2,6 +2,7 @@
 
 html {
     display: block;
+    background-color: #eae8d5;
     
 }
 body {
@@ -9,6 +10,7 @@ body {
     font-family: lato,tahoma,helvetica,arial,sans-serif;
     font-size: 1.15rem;
     line-height: 1.7;
+    background-color: #eae8d5;
     
 }
 
@@ -40,9 +42,6 @@ p{
 }
 
 
-table{
-  font-size: 14px;
-}
 
 #results {
 text-align: center;
@@ -51,11 +50,7 @@ text-align: center;
         
 }
 
-#person{
-text-align: center;
-    fill: #00a89e;
-    color: #00a89e;
-}
+
 
 input.submit-button{
   background: #b33062;
