@@ -13,7 +13,6 @@
 </head>
 <body>
 <div class="content">
-  <p>Go back to <a href="{{url_for('homepage')}}">homepage</a></p>
 
 
   <p>These are the journalists you may want to meet who live in the
@@ -29,13 +28,16 @@
 
         <img class="person" src="{{ url_for('static', filename='img/person.svg')}}" width="100" height="100">
           <p>{{p.fullname}}</p>
-            
-            <p class="info">{{p.fullname}} works as a {{p.title}} at {{p.publication}} in {{p.city}}, {{p.state}}. If you're also interested in {{p.interest}}, you should reach out on Twitter and meet up at #ONA17.</p>
+            <div class="info">
+            <p>{{p.fullname}} works as a {{p.title}} at {{p.publication}} in {{p.city}}, {{p.state}}. If you're also interested in {{p.interest}}, you should reach out on Twitter and meet up at #ONA17.</p>
     <img id="twitter" src="{{ url_for('static', filename='img/twitter.svg')}}" width="75" height="75">
-
+</div>
        
       {% endfor %}
+        <p>Go back to <a href="{{url_for('homepage')}}">homepage</a></p>
     </div>
     </div>
+      
+
 </body>
 </html>

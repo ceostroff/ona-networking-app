@@ -8,13 +8,20 @@
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.js"></script>
     <script type="text/javascript" src="{{url_for('static', filename='js/typeahead.js')}}"></script>
     	<script src="{{url_for('static', filename='js/main.js')}}"></script>
-    <!-- particles.js container --> <div id="particles-js"></div> <!-- stats - count particles -->  <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib --> <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
-</head>
+    <script src="{{url_for('static', filename='js/prefetch.js')}}"></script>
+    <!-- particles.js container --> <div id="particles-js"></div> <!-- stats - count particles -->  <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/0.11.1/typeahead.bundle.min.js" type="text/javascript"></script>
+    </head>
 <body>
-
+<div class="navbar">
+    <ul class="navbar">
+    <li><a href="{{url_for('homepage')}}">Home</a> </li>
+    <li><a href="{{url_for('about')}}">About</a> </li>
+        </ul>
+    </div>
     <div class="content">
-
-  <h1>Search for an ONA human</h1>
+ <h1><img id="header" src="{{ url_for('static', filename='img/ONA17-square.png')}}"> </h1>
+  <h2>Search for an ONA human</h2>
   {% include 'searchbox.html' %}
 
   <p>Data comes from the <a href="https://www.journalists.org">Online News Association</a></p>
