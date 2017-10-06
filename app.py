@@ -1,6 +1,7 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from foo import just_do_it
 from helpers import filter_by_state
+import json
 app = Flask(__name__)
 
 @app.route("/")
@@ -31,6 +32,7 @@ def results():
 #A44366
 
     elif request.args.get('state'):
+        global states
         search_type = 'state'
         search_val = request.args.get('state')
         app.logger.debug(search_val)
@@ -38,6 +40,7 @@ def results():
         
         
     elif request.args.get('publication'):
+        global publication
         search_type = 'publication'
         search_val = request.args.get('publication')
         app.logger.debug(search_val)
@@ -53,6 +56,8 @@ def results():
                             search_type=search_type, search_value=search_val)
     return html
 
+    
+    return jsonify(json_list=matches)
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
