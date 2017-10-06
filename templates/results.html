@@ -7,8 +7,8 @@
       <script type="text/javascript" src="{{url_for('static', filename='js/typeahead.js')}}"></script>
     	<script src="{{url_for('static', filename='js/main.js')}}"></script>
     <script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
-    <script src="{{url_for('static', filename='js/toggle.js')}}"></script>
     <!-- particles.js container --> <div id="particles-js"></div> <!-- stats - count particles -->  <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib --> <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script src="{{url_for('static', filename='js/toggle.js')}}"></script>
     
 </head>
 <body>
@@ -31,6 +31,7 @@
             <div class="info">
             <p>{{p.fullname}} works as a {{p.title}} at {{p.publication}} in {{p.city}}, {{p.state}}. If you're also interested in {{p.interest}}, you should reach out on Twitter and meet up at #ONA17.</p>
     <img id="twitter" src="{{ url_for('static', filename='img/twitter.svg')}}" width="75" height="75">
+            {{p.twitter}}    
 </div>
        
       {% endfor %}

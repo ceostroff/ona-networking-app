@@ -1,6 +1,6 @@
 from operator import itemgetter
 import csv
-LEGS_FNAME = './static/data/ona.csv'
+LEGS_FNAME = './static/data/ona.clean.csv'
 
 def get_journalists():
     

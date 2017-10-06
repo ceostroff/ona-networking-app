@@ -1,9 +1,8 @@
 from flask import Flask, render_template, request, jsonify
 from foo import just_do_it
-from helpers import filter_by_state
 import json
 app = Flask(__name__)
-
+    
 @app.route("/")
 def homepage():
     html = render_template('index.html')
@@ -56,8 +55,6 @@ def results():
                             search_type=search_type, search_value=search_val)
     return html
 
-    
-    return jsonify(json_list=matches)
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
