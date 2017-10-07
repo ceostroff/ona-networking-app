@@ -10,11 +10,11 @@ def get_journalists():
             newrows.append(row)
         return newrows
 
-def filter_by_state(state, datarows):
+def filter_by_title(title, datarows):
     matches = []
     for c in datarows:
        
-        if state.upper() == c['state']: 
+        if title == c['title']: 
             matches.append(c)
     return matches
 

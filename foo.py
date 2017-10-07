@@ -1,13 +1,13 @@
 from helpers import get_journalists
-from helpers import filter_by_state, filter_by_publication, filter_by_interest, sort_by_criteria
+from helpers import filter_by_title, filter_by_publication, filter_by_interest, sort_by_criteria
 
 ona = get_journalists()
 
-def just_do_it(state="", publication="", interest="", sortby="alpha"):
+def just_do_it(title="", publication="", interest="", sortby="alpha"):
     matched_rows = []
     datarows = ona
-    if state:
-        filteredrows = filter_by_state(state, ona)
+    if title:
+        filteredrows = filter_by_title(title, ona)
     elif publication:
         filteredrows = filter_by_publication(publication, ona)
     elif interest:

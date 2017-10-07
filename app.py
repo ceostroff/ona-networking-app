@@ -2,26 +2,26 @@ from flask import Flask, render_template, request, jsonify
 from foo import just_do_it
 app = Flask(__name__)
     
-@app.route("/")
+@app.route("/ona17/")
 def homepage():
     html = render_template('index.html')
     return html
 
-@app.route("/about")
+@app.route("/ona17/about")
 def about():
     html = render_template('about.html')
     return html
 
-@app.route("/results")
+@app.route("/ona17/results")
 def results():
     reqargs = request.args
     _sortby =  reqargs.get('sortby')
-    _state = reqargs.get('state')
+    _title = reqargs.get('title')
     _publication = reqargs.get('publication')
     _interest = reqargs.get('interest')
 
 
-    if not _state and not _publication and not _interest:
+    if not _title and not _publication and not _interest:
         return """
             <h1>Error</h1>
             <p>Must have either a state abbreviation or zipcode value</p>
@@ -29,11 +29,11 @@ def results():
         """.format(url=request.referrer)
 #A44366
 
-    elif request.args.get('state'):
-        search_type = 'state'
-        search_val = request.args.get('state')
+    elif request.args.get('title'):
+        search_type = 'title'
+        search_val = request.args.get('title')
         app.logger.debug(search_val)
-        peeps = just_do_it(state=search_val, sortby=_sortby)
+        peeps = just_do_it(title=search_val, sortby=_sortby)
         
         
     elif request.args.get('publication'):

@@ -1,10 +1,10 @@
 $(document).ready(function(){
     var substringMatcher = function(strs) {
   return function findMatches(q, cb) {
-    var states, substringRegex;
+    var titles, substringRegex;
 
     // an array that will be populated with substring matches
-    states = [];
+    titles = [];
 
     // regex used to determine if a string contains the substring `q`
     substrRegex = new RegExp(q, 'i');
@@ -13,15 +13,15 @@ $(document).ready(function(){
     // contains the substring `q`, add it to the `matches` array
     $.each(strs, function(i, str) {
       if (substrRegex.test(str)) {
-        states.push(str);
+        titles.push(str);
       }
     });
 
-    cb(states);
+    cb(titles);
   };
 };
 
-var states = ["Partner Operations Manager", 
+var titles = ["Partner Operations Manager", 
 "Social Media Manager", 
 "Marketer", 
 "Cofounder & CTO", 
@@ -1782,14 +1782,14 @@ var states = ["Partner Operations Manager",
 "Washington Digital Projects Editor"
 ];
 
-$('#states .typeahead').typeahead({
+$('#titles .typeahead').typeahead({
   hint: true,
   highlight: true,
   minLength: 1
 },
 {
-  name: 'states',
-  source: substringMatcher(states)
+  name: 'titles',
+  source: substringMatcher(titles)
 });
     
    var substringMatcher2 = function(strs) {
