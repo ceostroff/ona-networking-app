@@ -7,33 +7,38 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="{{url_for('static', filename='js/states.js')}}"></script>
     	<script src="{{url_for('static', filename='js/main.js')}}"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js" type="text/javascript"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/0.11.1/typeahead.bundle.min.js" type="text/javascript"></script>
     <!-- particles.js container --> <div id="particles-js"></div> <!-- stats - count particles -->  <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/0.11.1/typeahead.bundle.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-    var prefetch_url = "{{url_for('static', filename='data/ona.json')}}" ; // not so sure if you need the quote here?
-</script>
+<link href="https://fonts.googleapis.com/css?family=Mukta" rel="stylesheet">
     
     </head>
 <body>
-<div class="navbar">
+
+    
+    <div class="content">
+ <header><a href="https://ona17.journalists.org/"> <img id="header" src="{{ url_for('static', filename='img/ONA17-square.png')}}"></a> 
+</header>
+
+         <div class="navbar-top">
+         <h1>ONA Collaborate</h1>
+            <h2>By Caitlin Ostroff</h2>
     <ul class="navbar">
     <li><a href="{{url_for('homepage')}}">Home</a> </li>
     <li><a href="{{url_for('about')}}">About</a> </li>
         </ul>
-    </div>
-    <div class="content">
- <h1><img id="header" src="{{ url_for('static', filename='img/ONA17-square.png')}}"> </h1>
-  <h2>Search for an ONA human</h2>
+        </div>
+
+   
   {% include 'searchbox.html' %}
 
-  <p>Data comes from the <a href="https://www.journalists.org">Online News Association</a></p>
-</div>
+  
+<footer>
+    <p>Data comes from the <a href="https://www.journalists.org">Online News Association</a></p>
+    </footer>
     </body>
-<div class="thanks">
-    <p>Twitter Icon by Luboš Volkov and User Icon by Evgeniy Kozachenko, both from the Noun Project</p>
-    </div>
     
+    </div>
+
 </html>

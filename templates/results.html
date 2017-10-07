@@ -3,20 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Search results</title>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
   <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
-      <script type="text/javascript" src="{{url_for('static', filename='js/typeahead.js')}}"></script>
-    	<script src="{{url_for('static', filename='js/main.js')}}"></script>
-    <script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
-    <!-- particles.js container --> <div id="particles-js"></div> <!-- stats - count particles -->  <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib --> <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
-    <script src="{{url_for('static', filename='js/toggle.js')}}"></script>
-    
+    	
 </head>
 <body>
 <div class="content">
 
 
-  <p>These are the journalists you may want to meet who live in the
-      {{search_type}} of {{search_value}}
+  <p>Showing results for the
+      <b>{{search_type}}</b> of <b>{{search_value}}</b>
   </p>
 
   
@@ -25,20 +21,23 @@
     
       {% for p in ona %}
         
-
+<div id="together">
         <img class="person" src="{{ url_for('static', filename='img/person.svg')}}" width="100" height="100">
-          <p>{{p.fullname}}</p>
+          <p id="name">{{p.fullname}}</p>
             <div class="info">
-            <p>{{p.fullname}} works as a {{p.title}} at {{p.publication}} in {{p.city}}, {{p.state}}. If you're also interested in {{p.interest}}, you should reach out on Twitter and meet up at #ONA17.</p>
-    <img id="twitter" src="{{ url_for('static', filename='img/twitter.svg')}}" width="75" height="75">
-            {{p.twitter}}    
-</div>
+            <p>{{p.fullname}} works as a {{p.title}} at {{p.publication}} in {{p.city}}, {{p.state}}.</p>
+                <div>
+   <div> <p>Connect on Twitter <a href="{{p.twitter }}"><img id="twitter" src="{{ url_for('static', filename='img/twitter.svg')}}" width="50" height="50"></a></p> </div>
+                
+                </div>
+                </div>
+        </div>
        
       {% endfor %}
         <p>Go back to <a href="{{url_for('homepage')}}">homepage</a></p>
     </div>
     </div>
-      
-
+     
+    
 </body>
 </html>
