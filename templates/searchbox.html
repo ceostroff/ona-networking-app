@@ -1,17 +1,14 @@
 <form action="{{url_for('results')}}" method="get">
 
         <br>
-    <h3>Find people to collaborate with here.</h3> <h3>Search by state, publication or job title.</h3>
+    <h3>Find people to collaborate with here.</h3> <h3>Search by publication or job title.</h3>
     <div id="states">
-        <input type="text" class="typeahead" id="state" name="state" value="" placeholder="State or Country">
+        <input type="text" class="typeahead" id="state" name="state" value="" placeholder="Job Title">
     </div>
     <div id="publications">
         <input type="text" class="typeahead" name="publication" value="" placeholder="Publication">
     </div>
-       <div id="interests">
-        <input type="text" class="typeahead" name="interest" value="" placeholder="Job Title">
-
- </div>
+       
         <br>
         <input class="submit-button" type="submit" value="Submit">
   </form>
