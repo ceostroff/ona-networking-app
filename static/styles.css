@@ -12,7 +12,13 @@ body, html {
     text-align: center;
     background-color: #f4f4e9
 }
+.tt-menu{
+    background: white;
+    text-align: left;
+    margin: auto;
 
+    
+}
 
 .navbar ul {
   list-style: none;
