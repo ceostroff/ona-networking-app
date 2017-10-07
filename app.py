@@ -2,17 +2,17 @@ from flask import Flask, render_template, request, jsonify
 from foo import just_do_it
 app = Flask(__name__)
     
-@app.route("/")
+@app.route("/ona17/")
 def homepage():
     html = render_template('index.html')
     return html
 
-@app.route("/about")
+@app.route("/ona17/about")
 def about():
     html = render_template('about.html')
     return html
 
-@app.route("/results")
+@app.route("/ona17/results")
 def results():
     reqargs = request.args
     _sortby =  reqargs.get('sortby')
