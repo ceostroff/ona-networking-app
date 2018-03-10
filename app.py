@@ -52,8 +52,5 @@ def results():
                             search_type=search_type, search_value=search_val)
     return html
 
-def main():
-    app.run(debug=True, use_reloader=True)
-
 if __name__ == '__main__':
-    main()
+    app.run(debug=True, use_reloader=True)
